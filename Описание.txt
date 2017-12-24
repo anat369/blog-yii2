@@ -1,0 +1,34 @@
+Простенький блог на yii2.
+
+У нас есть следующие классы:
+
+1. Пользователь - User 
+
+У него есть свойства - id, name, email, password, photo, isAdmin
+
+Он может совершать действия - signup(), login(), signupFromVk()
+
+2. Категории статей - Category
+
+Свойства - id, title 
+
+Действия - getArticles() - вывести все статьи, getArticlesCount() - вывести в опр. категории
+
+3. Статья - Article
+
+Свойства - id, title, description, content, image, viewew, user_id, category_id 
+
+Действия - getTags() - вывести все теги статьи, getComments() - вывести все комментарии к 
+статье, getCategory() - вывести категорию статьи, getAuthor() - вывести автора, 
+images() - все действия с картинкой статьи, saveCategory() - установить категорию статьи
+getCategoryTitle() - вывести название статьи, getDate() - вывести дату,
+getPopularArticles() - вывести популярные статьи, getRecentArticles() - вывести последние статьи, viewedCounter() - счетчик просмотров статьи, saveTags() - сохранить теги,
+getSavedTags() - выбрать сохраненные теги.
+
+4. Комментарии - Comment
+
+Свойства - id, text, user_id, article_id, status
+
+Действия - getArticle() - вывести статью к комментарию, getAuthor() - вывести автора комм.,
+allow() - разрешить комментарии, disallow() - запретить, isAllowed() - узнать, разрешен ли
+комментарий, getDate() - вывести дату комментария.
